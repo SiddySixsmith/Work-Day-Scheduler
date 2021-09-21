@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     timeTracker();
 })
-
+//clears local storage of the below values
 $(".clearBtn").on("click", function() {
     window.localStorage.removeItem('hour8');
     window.localStorage.removeItem('hour9');
@@ -65,7 +65,8 @@ $(".clearBtn").on("click", function() {
     window.localStorage.removeItem('hour15');
     window.localStorage.removeItem('hour16');
     window.localStorage.removeItem('hour17');
-
-    document.getElementById("description").value = ' ';
-
-})
+});
+// clears text with in the input elements
+$("#clearBtn").on("click", function() {
+    $(".textarea").val("");
+});
